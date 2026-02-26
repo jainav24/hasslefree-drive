@@ -1,5 +1,5 @@
 /* ========================================
-   DriveSync – App JavaScript
+   HassleFreeDrive – App JavaScript
    All animations, interactions, and logic
    ======================================== */
 
@@ -7,13 +7,13 @@
   'use strict';
 
   /* ── DOM Refs ── */
-  const navbar    = document.getElementById('navbar');
+  const navbar = document.getElementById('navbar');
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
   const mobileOverlay = document.getElementById('mobileOverlay');
-  const mobileClose   = document.getElementById('mobileClose');
-  const wordRotator   = document.getElementById('wordRotator');
-  const mobLinks  = document.querySelectorAll('.mob-link, .mob-cta');
+  const mobileClose = document.getElementById('mobileClose');
+  const wordRotator = document.getElementById('wordRotator');
+  const mobLinks = document.querySelectorAll('.mob-link, .mob-cta');
 
   /* ========================================
      1. NAVBAR – Scroll Transition
@@ -33,9 +33,7 @@
     lastScroll = scrollY;
   }, { passive: true });
 
-  /* ========================================
-     2. HAMBURGER MENU
-  ======================================== */
+
   function openMobileNav() {
     mobileNav.classList.add('active');
     mobileOverlay.classList.add('active');
@@ -309,6 +307,6 @@
   /* ========================================
      12. INIT COMPLETE
   ======================================== */
-  console.log('🚗 DriveSync – Ready to go!');
+  console.log('🚗 HassleFreeDrive – Ready to go!');
 
 })();
