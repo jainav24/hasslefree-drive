@@ -1389,48 +1389,81 @@ img {
    CONTACT
    ======================================== */
 .contact-section {
-  padding: 80px 0;
+  padding: 100px 0;
   background: var(--off-white);
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.contact-email-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
 }
 
-.contact-card {
+.contact-email-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   background: var(--white);
   border-radius: var(--r-lg);
-  padding: 36px 28px;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: var(--shadow-sm);
+  padding: 32px;
+  text-decoration: none;
+  border: 1px solid rgba(15, 157, 88, 0.08);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.contact-email-card * {
+  pointer-events: none;
+}
+
+.contact-email-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--green);
+}
+
+.contact-icon-box {
+  font-size: 2.2rem;
+  background: var(--green-pale);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
-.contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border);
+.contact-email-card:hover .contact-icon-box {
+  background: var(--green);
+  transform: scale(1.05);
+  filter: brightness(0) invert(1);
 }
 
-.contact-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
-
-.contact-card h4 {
+.contact-info h4 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
-.contact-card p {
+.contact-info .email-address {
+  font-size: 0.95rem;
   color: var(--text-light);
-  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.contact-cta-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
 }
 
 /* ========================================
@@ -1700,10 +1733,6 @@ img {
 
   .about-img-wrap {
     height: 300px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
   }
 
   .footer-container {

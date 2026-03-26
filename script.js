@@ -133,6 +133,14 @@
     });
   });
 
+  // Handle mailto links explicitly for better reliability
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = link.href;
+    });
+  });
+
   /* ========================================
      6. ACTIVE NAV LINK on scroll
   ======================================== */
